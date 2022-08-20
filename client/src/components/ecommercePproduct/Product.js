@@ -16,7 +16,7 @@ const Product = (props) => {
 
     const deleteHandler = async () => {
         await axios
-          .delete(`http://localhost:5000/products/${_id}`)
+          .delete(`https://mernfaizecommerce.herokuapp.com/products/${_id}`)
           .then((res) => res.data)
           window.location.reload();
         

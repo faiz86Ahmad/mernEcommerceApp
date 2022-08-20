@@ -3,7 +3,7 @@ import axios from "axios";
 import Product from "./Product";
 import {Grid} from '@mui/material';
 import "./product.css";
-const URL = "http://localhost:5000/products";
+const URL = "https://mernfaizecommerce.herokuapp.com/products";
 
 const fetchHandler = async () => {
     return await axios.get(URL).then((res) => res.data);

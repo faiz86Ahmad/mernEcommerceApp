@@ -17,7 +17,7 @@ useEffect(()=>{
 
     const fetchHandler = async()=>{
 
-        await axios.get(`http://localhost:5000/products/${id}`)
+        await axios.get(`https://mernfaizecommerce.herokuapp.com/products/${id}`)
         .then((res)=>res.data)
         .then((data) => setInputs(data.product));
 
@@ -28,7 +28,7 @@ useEffect(()=>{
 },[id])
 const sendRequest = async () => {
     await axios
-      .put(`http://localhost:5000/products/${id}`, {
+      .put(`https://mernfaizecommerce.herokuapp.com/products/${id}`, {
         name: String(inputs.name),
         description: String(inputs.description),
         price: Number(inputs.price),
