@@ -30,7 +30,7 @@ import {
   
     const sendRequest = async () => {
       await axios
-        .post("http://localhost:5000/products", {
+        .post("https://mernfaizecommerce.herokuapp.com/products", {
           name: String(inputs.name),
           description: String(inputs.description),
           price: Number(inputs.price),
