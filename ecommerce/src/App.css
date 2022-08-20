@@ -1,0 +1,44 @@
+body{
+  padding:0;
+  margin:0;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.box{
+  position: relative;
+  text-align: center;
+  color: white;
+  width:100%;
+  height:100vh;
+
+
+}
+.homeImg{
+  background-size: cover;
+  width:100%;
+
+
+}
+.logo{
+  text-decoration: none;
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.centered {
+  position: absolute;
+  font-size: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

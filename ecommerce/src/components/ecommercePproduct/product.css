@@ -1,0 +1,17 @@
+.card{
+   margin-top: 50px;
+}
+ .zoom:hover{
+    transition: 0.2s;
+    transform: scale(1.1);
+ }
+
+ .img{
+    width:200px;
+    height:200px;
+    background-repeat: no-repeat;
+    background-size: fixed;
+    padding:5px;
+    margin-left:20%;
+
+ }
