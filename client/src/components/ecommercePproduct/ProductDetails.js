@@ -7,6 +7,7 @@ import {
     FormLabel,
     TextField,
   } from "@mui/material";
+  const baseURL = "https://mernfaizecommerce.herokuapp.com/products";
 
 const ProductDetails = () => {
 const [inputs, setInputs] = useState();    
@@ -17,7 +18,7 @@ useEffect(()=>{
 
     const fetchHandler = async()=>{
 
-        await axios.get(`https://mernfaizecommerce.herokuapp.com/products/${id}`)
+        await axios.get(`${baseURL}/${id}`)
         .then((res)=>res.data)
         .then((data) => setInputs(data.product));
 
@@ -28,7 +29,7 @@ useEffect(()=>{
 },[id])
 const sendRequest = async () => {
     await axios
-      .put(`https://mernfaizecommerce.herokuapp.com/products/${id}`, {
+      .put(`${baseURL}/${id}`, {
         name: String(inputs.name),
         description: String(inputs.description),
         price: Number(inputs.price),

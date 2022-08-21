@@ -7,7 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link ,useNavigate} from "react-router-dom";
-import axios from  'axios'
+import axios from  'axios';
+const baseURL = "https://mernfaizecommerce.herokuapp.com/products";
 
 
 const Product = (props) => {
@@ -16,9 +17,11 @@ const Product = (props) => {
 
     const deleteHandler = async () => {
         await axios
-          .delete(`https://mernfaizecommerce.herokuapp.com/products/${_id}`)
+          .delete(`${baseURL}/${_id}`)
           .then((res) => res.data)
-          window.location.reload();
+          .then(() => history("/"))
+          .then(() => history("/products"));
+          
         
          
          

@@ -10,6 +10,7 @@ import {
   import axios from "axios";
   import React, { useState } from "react";
   import { useNavigate } from "react-router-dom";
+  const baseURL = "https://mernfaizecommerce.herokuapp.com/products";
   
   const AddProduct = () => {
     const history = useNavigate();
@@ -30,7 +31,7 @@ import {
   
     const sendRequest = async () => {
       await axios
-        .post("https://mernfaizecommerce.herokuapp.com/products", {
+        .post(baseURL, {
           name: String(inputs.name),
           description: String(inputs.description),
           price: Number(inputs.price),
